@@ -1,0 +1,58 @@
+body {
+    background: url(./images/background.jpg) center center fixed;
+    background-size: cover;
+
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+}
+
+.key {
+    margin: 0 auto; 
+    width: 6rem;
+
+    font-size: 1.5rem;
+    padding: 2rem .5rem;
+    transition: all 0.07s;
+    text-align: center;
+    color: #FF9900;
+    background-color: rgba(0,0,0,0.6);
+    border: black 3px solid;
+    border-radius: 10px;
+}
+
+.playing {
+    transform: scale(1.1);
+    border-color: #FF9900;
+    box-shadow: 0 0 5px black;
+}
+
+kbd {
+    display: none; 
+    font-size: 40px;
+}
+
+@media (min-width: 500px) {
+    main {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    main {
+        grid-template-columns: repeat(10, 1fr);
+        width: 100%;
+        position: absolute;
+        top: 0; bottom: 0; left: 0; right: 0;
+    }
+    kbd {
+        display: block;
+    }
+
+}
